@@ -14,4 +14,6 @@ urlpatterns = [
     path('<int:year>/<str:month>/', PostMAV.as_view(), name='post_month_archive'),
     path('<int:year>/<str:month>/<int:day>/', PostDAV.as_view(), name='post_day_archive'),
     path('today/', PostTAV.as_view(), name='post_today_archive'),
+
+    path('search/', SearchFormView.as_view(), name='search'),
 ]
